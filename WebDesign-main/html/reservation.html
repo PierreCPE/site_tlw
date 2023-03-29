@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Réservation</title>
+        <link rel="stylesheet" href=../css/styleIndex.css>
+        <script src='../JavaScript/ScrollUp.js'></script>
+        <script src='../JavaScript/Reservation.js'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="../images/logo.png" alt="Logo"/>
+            <nav class="headernav">
+                <a href="index.html">Accueil</a>
+                <a href="contact.html">Contact</a>
+                <a href="map.html">Carte</a>
+                <a href="authentification.html">Se connecter</a>
+            </nav>
+        </header>
+        <fieldset class= "choosenTrip"><legend>Voyage choisi</legend>
+            <div id = "infoChoosenTrip">
+
+
+
+
+            </div>
+
+        </fieldset>
+        <form id="booking" action="recap.html" method="GET" onsubmit="return ( checkForm() & reserv())">
+
+            <fieldset>
+                <legend>Informations</legend>
+                    <label for="prenom">Prénom*</label><input type="text" id="prenom" name="prenom"  placeholder="Prénom" required>
+                    <label for="nom">Nom*</label><input type="text" id="nom" name="nom" placeholder="Nom" required>
+                    <label for="mail">Mail*</label><input type="email" id="mail" name="mail" placeholder="ex: jean.dupont@gmail.com" required><br>
+                    <label for="telephone">Téléphone</label><input type="tel" id="telephone" name="telephone" placeholder="ex : 06 41 42 43 46" pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}">
+            </fieldset>
+            <fieldset>
+                <legend>Durée</legend>
+                <label for="dated">Date départ*</label><input type="date" id="dated" name="dated" required>
+                <label for="dater">Date retour*</label><input type="date" id="dater" name="dater" required>
+            </fieldset>
+            <fieldset>
+                <legend>Nombre</legend>
+                <label for="nbradulte">Nombre d'adulte*</label><input type="number" id="nbradulte" name="nbradulte" min="0" max="10000" required>
+                <label for="nbrenfant">Nombre d'enfant*</label><input type="number" id="nbrenfant" name="nbrenfant" min="0" max="10000" required>
+                <label for="ptitdejoui">Petit-déjeuner ?</label>
+                <input type="radio" id="ptitdejoui" name="ptitdej" value="oui" checked><label for="ptitdejoui">Oui</label>
+                <input type="radio" id="ptitdejnon" name="ptitdej" value="non" checked><label for="ptitdejnon">Non</label> 
+
+            </fieldset>
+            <fieldset>
+                <label for="renseignement">Demande de renseignement :</label><input type="text" id="renseignement" name="renseignement" placeholder="Toute demande de renseignement et chose dont vous souhaitez nous informer" size="200">
+            </fieldset>
+            
+               
+            <fieldset>
+                <label for="raz">Remise à zéro</label><input type="reset" id="raz" name="raz" >
+                <label for="valider">Valider</label><input type="submit" id="valider" name="valider">
+
+
+            </fieldset>
+        </form>
+        
+        <script src='../JavaScript/Index.js'></script>
+        <script src='../JavaScript/Cost.js'></script>
+        <footer>
+            <div class="gauche">
+                <img id = iconAdr src="../images/adresse.png" alt="Logo adresse">
+                <a class = "texte" href="https://www.google.fr/maps/place/86+Rue+du+1er+Mars+1943,+69100+Villeurbanne/@45.7633309,4.8865459,17z/data=!3m1!4b1!4m5!3m4!1s0x47f4c0349cb9f019:0x9bb854ce69bf8d08!8m2!3d45.7633309!4d4.8887346">
+                    Notre adresse: 86 Rue du 1er Mars 1943
+                </a>
+            </div>
+            <div class = "milieu">
+                <img class="logo" src="../images/logo.png" alt="Logo"/>
+            </div>
+            <div class = "droite">
+                <a href="https://youtube.com/"><img id = "iconYtb" src="../images/youtubeicon.png" alt="Notre Youtube"/></a>
+                <a href="https://facebook.com/"><img id = "iconFb" src="../images/facebookicon.png" alt="Notre Facebook"/></a>
+                <a href="https://instagram.com/"><img id = "iconIg" src="../images/instagramicon.png" alt="Notre Instagram"/></a>
+                <a href="https://twitter.com/"><img id = "iconTw" src="../images/twittericon.png" alt="Notre Twitter"/></a>
+                <a href="contact.html"><img id = "iconMail" src="../images/mail.png" alt="Nous contacter"></a>
+            </div>
+        </footer>
+        <button onclick="topFunction()" id="UpBtn" title="Retour au haut de la page">Retour</button> 
+    </body>
+</html>

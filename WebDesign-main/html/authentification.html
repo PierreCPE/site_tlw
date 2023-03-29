@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Authentification</title>
+        <link rel="stylesheet" href=../css/styleIndex.css>
+        <script src='../JavaScript/ScrollUp.js'></script>
+        <script src='../JavaScript/Credentials/DataConnexion.js'></script>
+        <script src='../JavaScript/Credentials/ScriptAuthentification.js'></script>
+        <script src='../JavaScript/Credentials/ScriptInscription.js'></script>
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="../images/logo.png" alt="Logo"/>
+            <nav class="headernav">
+                <a href="index.html">Accueil</a>
+                <a href="contact.html">Contact</a>
+                <a href="map.html">Carte</a>
+                <a class="active" href="authentification.html">Se connecter</a>
+            </nav>
+            
+        </header>
+        <form id="formConn" class="hide">
+            <fieldset>
+                <legend>Connexion</legend>
+                    <label for="usrname1">Identifiant: </label><input type="text" id="usrname1" name="username" required>
+                    <label for="pword1">Mot de passe: </label><input type="password" id="pword1" name="password" required>
+                    <input type="submit" value="Se connecter" id="submitConn">
+            </fieldset>
+        </form>
+        <form id="formInsc" class="hide">
+            <fieldset>
+                <legend>Inscription</legend>
+                    <label for="usrname2">Identifiant: </label><input type="text" id="usrname2" name="username" required>
+                    <label for="pword2">Mot de passe: </label><input type="password" id="pword2" name="password" required>
+                    <label for="checkpword2">Confirmer votre mot de passe: </label><input type="password" id="checkpword2" name="checkpassword" required>
+                    <label for="mail">Adresse Mail: </label><input type="email" id="mail" name="email" required>
+                    <input type="submit" value="S'inscrire" id="submitInsc">
+            </fieldset>
+        </form>
+        <div id="divConn" class="hide">
+            <a href="index.html">Vous êtes maintenant connecté au site. Voulez-vous retourner à l'acceuil ?</a>
+        </div>
+        <footer>
+            <div class="gauche">
+                <img id = iconAdr src="../images/adresse.png" alt="Logo adresse">
+                <a class = "texte" href="https://www.google.fr/maps/place/86+Rue+du+1er+Mars+1943,+69100+Villeurbanne/@45.7633309,4.8865459,17z/data=!3m1!4b1!4m5!3m4!1s0x47f4c0349cb9f019:0x9bb854ce69bf8d08!8m2!3d45.7633309!4d4.8887346">
+                    Notre adresse: 86 Rue du 1er Mars 1943
+                </a>
+            </div>
+            <div class = "milieu">
+                <img class="logo" src="../images/logo.png" alt="Logo"/>
+            </div>
+            <div class = "droite">
+                <a href="https://youtube.com/"><img id = "iconYtb" src="../images/youtubeicon.png" alt="Notre Youtube"/></a>
+                <a href="https://facebook.com/"><img id = "iconFb" src="../images/facebookicon.png" alt="Notre Facebook"/></a>
+                <a href="https://instagram.com/"><img id = "iconIg" src="../images/instagramicon.png" alt="Notre Instagram"/></a>
+                <a href="https://twitter.com/"><img id = "iconTw" src="../images/twittericon.png" alt="Notre Twitter"/></a>
+                <a href="contact.html"><img id = "iconMail" src="../images/mail.png" alt="Nous contacter"></a>
+            </div>
+        </footer>
+        <button onclick="topFunction()" id="UpBtn" title="Retour au haut de la page">Retour</button> 
+    </body>
+</html>
